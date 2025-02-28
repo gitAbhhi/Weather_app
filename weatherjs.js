@@ -3,7 +3,7 @@ const cityInput = document.querySelector(".cityinput");
 const searchBtn = document.querySelector(".searchBtn");
 const citynotfound = document.querySelector('.not-found')
 const searchagain = document.querySelector(".searchagain")
-const weathercontainer = document.querySelector("#weather-container")
+const weathercontainer = document.querySelector(".weather-container")
 const cityname = document.querySelector("#city-name")
 const tempvalue = document.querySelector(".temp")
 const tempdesc = document.querySelector(".description")
@@ -99,7 +99,7 @@ function showdisplaysection(section) {
     [weathercontainer, searchagain, citynotfound]
         .forEach(section => section.style.display = "none")
 console.log("city toh dikhana chahiye")
-    section.style.display = "block"
+    section.style.display = "flex"
 }
 
 function updateforcastitems(weatherdata) {

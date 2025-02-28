@@ -9,14 +9,15 @@ body {
     margin: 0;
     background-size: cover; 
     background-position: center;
-    /* color: rgb(35, 39, 35); */
     color: rgb(255, 255, 255);
-    /* backdrop-filter: blur(12px); */
   }
-
+   
+  .weather-container{
+    display: flex;
+    flex-direction: column;
+  }
   .searchimg{
     width: 200px;
-    /* height: 326px; */
   }
   .not-found{
     margin-top: 50px;
@@ -31,16 +32,14 @@ body {
   .container {
     backdrop-filter: blur(28px);
     text-align: center;
-    /* background-image: linear-gradient(to bottom, rgb(174, 184, 184), rgb(58, 75, 93)); */
     padding: 30px;
     border-radius: 20px;
     width: 260px;
     height: 426px;
     box-shadow: 6px 8px 25px rgba(0, 0, 0, 0.5);
   }
-
+  
   .temp-detail{
-    /* height: 80px; */
     font: 38px;
     font-size: bold;
   }
@@ -49,7 +48,6 @@ body {
     height: 40px;
     font-size: 40px;
     font-weight: bold;
-    /* background-color: red; */
   }
   .description{
     font-size: 20px;
@@ -74,24 +72,21 @@ body {
     font-weight: bold;
   }
   .search-bar-icon input{
-    /* border-radius: 20px; */
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     width: 70%;
     height:36px;
     margin-right:0rem;
     padding-left: 1rem;
-    /* background: rgb(0,0,0,0.25); */
     border: none;
   }
   input:focus {
     border-color: skyblue;
-    outline: none; /* Removes default browser outline */
-    box-shadow: 0 0 5px rgb(208, 238, 249); /* Optional: Adds a glow effect */
+    outline: none; 
+    box-shadow: 0 0 5px rgb(208, 238, 249);
 }
 
   .search-bar-icon button{
-    /* border-radius: 20px; */
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     width: 20%;
@@ -149,17 +144,13 @@ body {
     display: flex;
     overflow-x: scroll;
     margin-top: 1rem;
-    /* scrollbar-width: thin; */
-    /* scroll-margin-bottom:16px ; */
     gap: 15px;
   }
   .coming-day::-webkit-scrollbar {
-        /* background: rgb(0,0,0,0.1); */
         height: 8px;
     }
     
     .coming-day::-webkit-scrollbar-track {
-        /* scrollbar-color: #555 #222; */
         background: rgb(0,0,0,0.1);
         border-radius: 99px;
     }
@@ -186,4 +177,82 @@ body {
   .tempIcon{
     width: 45px;
   }
-  
+
+
+  @media (max-width:500px) {
+    
+    .body{
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+      height: 100%;
+    }
+    .container{
+      width: 100%;
+      height: 91%;
+      gap: 4vw;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      border-radius: 0px;
+    }
+    .searchagain{
+      width: 100%;
+      height: 100%;
+    }
+    .searchagain h1{
+      font-size: 8vw;
+    }
+    .searchagain h3{
+      font-size: 5vw;
+    }
+    .not-found{
+      width: 100%;
+      height: 100%;
+    }
+    .not-found h1{
+      font-size: 8vw;
+    }
+    .not-found h2{
+      font-size: 5vw;
+    }
+    .weather-container{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      gap: 4vh;
+      font-size: 5vw;
+    }
+    .weatherimg{
+      width: 35vw;
+    }
+    .temp{
+      font-size: 12vw;
+      margin-bottom: 2vw;
+    }
+    .description{
+      font-size: 9vw;
+    }
+    .search-bar-icon{
+      margin-top: 30px;
+      width: 100%;
+    }
+    .search-bar-icon input{
+      border-top-left-radius: 15vw;
+      border-bottom-left-radius: 15vw;
+      width: 80%;
+      height:12vw;
+    }
+    .search-bar-icon button{
+      border-top-right-radius: 15vw;
+      border-bottom-right-radius:15vw;
+      width: 20%;
+      height: 12.7vw;
+      
+    }
+    .search-bar-icon span{
+      font-size: 7vw;
+    }
+    .searchimg{
+     width: 70%; 
+    }
+  }
